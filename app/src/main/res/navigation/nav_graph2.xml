@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/pg1MaleFemale12">
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.sergnfitness.presentation.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment2_to_pg1MaleFemale12"
+            app:destination="@id/pg1MaleFemale12" />
+    </fragment>
+    <fragment
+        android:id="@+id/next2"
+        android:name="com.sergnfitness.presentation.part1.Next"
+        android:label="pg2_next"
+        tools:layout="@layout/pg2_next" >
+        <action
+            android:id="@+id/action_next2_to_dataAgeHightWeight2"
+            app:destination="@id/dataAgeHightWeight2" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataAgeHightWeight2"
+        android:name="com.sergnfitness.presentation.part1.DataAgeHightWeight"
+        android:label="pg3_data_age_hight_weight"
+        tools:layout="@layout/pg3_data_age_hight_weight" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.sergnfitness.presentation.login.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/pg1MaleFemale12"
+        android:name="com.sergnfitness.presentation.part1.Pg1MaleFemale1"
+        android:label="Pg1MaleFemale1" >
+        <action
+            android:id="@+id/action_pg1MaleFemale12_to_next2"
+            app:destination="@id/next2" />
+    </fragment>
+</navigation>
